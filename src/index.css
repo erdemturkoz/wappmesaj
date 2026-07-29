@@ -1,0 +1,5 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base { body { margin: 0; font-family: 'Avenir Next', Avenir, 'Segoe UI', Helvetica, sans-serif; } button,input,textarea,select { font: inherit; } }
+@layer components { .panel { @apply rounded-3xl border border-white/10 bg-white/[.055] p-5 shadow-xl backdrop-blur; } .section-title { @apply mb-4 flex items-center gap-2 font-black; } .field { @apply w-full rounded-2xl border border-white/10 bg-black/20 px-4 py-3 text-white outline-none placeholder:text-slate-600 focus:border-emerald-400/60; } .badge { @apply inline-flex items-center rounded-full bg-white/[.07] px-3 py-1.5 text-xs font-bold; } .stat { @apply flex items-center gap-4 rounded-3xl border border-white/10 bg-white/[.055] p-5; } .stat svg { @apply text-emerald-400; } .stat span { @apply block text-xs text-slate-400; } .stat strong { @apply mt-1 block text-2xl; } .control { @apply inline-flex items-center gap-2 rounded-xl bg-white/[.07] px-3 py-2 text-xs font-bold text-slate-300 hover:bg-white/10; } .nav { @apply rounded-xl px-4 py-2 text-sm font-bold text-slate-400; } .nav-active { @apply bg-white text-slate-950; } }
