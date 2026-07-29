@@ -89,6 +89,10 @@
 }
 
 @layer components {
+  .app-header {
+    @apply mb-8 flex flex-col gap-5 rounded-3xl border border-white/[.07] bg-slate-900/45 p-5 shadow-xl shadow-black/10 backdrop-blur-xl sm:flex-row sm:items-center sm:justify-between sm:p-6;
+  }
+
   .panel {
     @apply rounded-3xl border border-white/[.08] bg-slate-900/70 p-5 shadow-2xl shadow-black/20 backdrop-blur-xl;
     transition: border-color 180ms ease, background-color 180ms ease, transform 180ms ease, box-shadow 180ms ease;
@@ -155,6 +159,7 @@
 }
 
 @media (max-width: 640px) {
+  .app-header { @apply rounded-2xl p-4; }
   .panel { @apply rounded-2xl p-4; }
   .stat { @apply rounded-2xl p-4; }
   .nav { @apply flex-1 px-3 py-2 text-xs; }
