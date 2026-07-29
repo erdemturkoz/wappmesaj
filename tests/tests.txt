@@ -1,0 +1,64 @@
+# Tests
+
+## Test 1 - Şube gönderim ve analiz araçlarını gösterir [sanity]
+Viewport: desktop
+Covers: şube girişi, mevcut gönderim akışı, dönem filtresi, CSV dışa aktarma
+Description: İzmit kullanıcısının gönderim araçlarıyla birlikte yeni analiz kontrollerine erişebildiğini doğrular.
+
+Steps:
+1. "izmit" ve "1234" ile giriş yap
+2. "Mesaj Gönder" sekmesini aç
+3. Alıcılar ve mesaj bölümlerini incele
+
+Expected: Gönderim ekranında "CSV / TXT yükle" ve "Şablonu kaydet"; Analiz ekranında "Rapor ve geçmiş filtreleri" ve "CSV dışa aktar" kontrolleri görünür.
+
+## Test 2 - Mesaj şablonu kaydedilir ve tekrar seçilir
+Viewport: desktop
+Covers: şablon oluşturma, tarayıcıda kalıcı şablon, şablondan mesaj doldurma
+Description: Sık kullanılan bir mesajın şablon olarak kaydedilip yeniden uygulanabildiğini doğrular.
+
+Steps:
+1. "korfez" ve "1234" ile giriş yap
+2. Mesaj alanına "Günlük test mesajı" yaz
+3. Şablon adına "Günlük" yaz ve "Şablonu kaydet" düğmesine bas
+4. Kayıtlı şablon listesinden "Günlük" seç
+
+Expected: Mesaj alanında "Günlük test mesajı" görünür.
+
+## Test 3 - Yönetici şube bazlı rapor filtrelerini kullanır
+Viewport: desktop
+Covers: yönetici girişi, şube raporu, dönem ve durum filtreleri, şube yönetiminin korunması
+Description: Merkez yöneticisinin analiz kayıtlarını şube ve dönem bazında filtreleyebildiğini doğrular.
+
+Steps:
+1. "admin" ve "1234" ile giriş yap
+2. "Analiz" sekmesine geç
+3. Dönem, durum ve şube filtrelerini incele
+4. "Şubeler" sekmesine geç
+
+Expected: "Bugün", "7 gün", "30 gün", "Tüm şubeler" filtreleri ile İzmit ve Körfez şube yönetimi erişilebilir durumdadır.
+
+## Test 4 - Eklenti ve açık rıza olmadan gönderim başlamaz
+Viewport: desktop
+Covers: gönderim güvenlik sınırı, eklenti bağlantısı, açık rıza
+Description: Yeni araçların mevcut gönderim korumalarını aşmadığını doğrular.
+
+Steps:
+1. "izmit" ve "1234" ile giriş yap
+2. Geçerli telefon numarası ve mesaj gir
+3. Açık rıza kutusunu boş bırak
+
+Expected: "Sıralı Gönderimi Başlat" düğmesi devre dışıdır.
+
+## Test 5 - Mobil analiz filtreleri erişilebilirdir
+Viewport: mobile
+Covers: responsive analiz ekranı, dönem filtresi, arama, CSV dışa aktarma
+Description: Rapor ve geçmiş filtrelerinin mobil ekranda taşma olmadan erişilebilir olduğunu doğrular.
+
+Steps:
+1. "izmit" ve "1234" ile giriş yap
+2. "Analiz" sekmesine geç
+3. Filtre ve arama alanlarını bul
+4. Sayfayı aşağı kaydır
+
+Expected: Dönem düğmeleri, durum filtresi, geçmiş araması ve CSV dışa aktarma kontrolü mobil ekranda kullanılabilir durumdadır.
